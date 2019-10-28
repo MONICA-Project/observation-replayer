@@ -1,7 +1,7 @@
 version: '3.5'
 services:
   observation-replayer:
-    image: "janniswarnat/observation-replayer:latest"
+    image: "monicaproject/observation-replayer:latest"
     container_name: "observation-replayer"
     environment:
       BROKER_URI: "tcp://<monica_broker_address>:1883"
