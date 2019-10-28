@@ -1,10 +1,10 @@
 language: minimal
 
 before_deploy:
-  - docker build -t janniswarnat/observation-replayer:latest .
+  - docker build -t monicaproject/observation-replayer:latest .
   - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_USERNAME" --password-stdin
 deploy:
   - provider: script
-    script: docker push janniswarnat/observation-replayer:latest
+    script: docker push monicaproject/observation-replayer:latest
     on:
       branch: master
